@@ -1,0 +1,11 @@
+body{
+	font-size: 67.5%;
+	font-family: "Smythe", cursive;
+	background: url(img/background1.jpg) no-repeat fixed top center;
+	padding: 0;
+	margin: 0;
+	-webkit-background-size: 50% 100%;
+	-moz-background-size: 50% 100%;
+	background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+}
