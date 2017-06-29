@@ -233,7 +233,7 @@ a:focus {
 }
 .moon {
   width: 100%;
-  padding: 100px 0;
+  padding: 100%;
   background: url(../img/Moon-center.jpg) no-repeat center center scroll;
   background color: black;
   -webkit-background-size: cover;
