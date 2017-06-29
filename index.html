@@ -121,10 +121,16 @@
                 <hr>
                 <div class="form">
                    <form action="http://formspree.io/anagom42@gmail.com" method="POST">
-                        <input type="text" name="name" placeholder="Your name" style="margin: 5px;">
-                        <input type="email" name="email" placeholder="Your email" style="margin: 5px;">
-                        <textarea name="message" placeholder="Your message" style="margin: 5px;"></textarea>
-                        <button type="submit">Send</button>
+                       <input type="text" id="cname" class="form-control" name="Name:" placeholder="Name" required="" data-validation-required-message="Please enter your name." aria-invalid="false" style="margin: 5px;">
+                                <p class="help-block text-danger"></p>
+                            
+                        <input type="email" id="cemail" name="Email:" class="form-control" placeholder="Your E-mail" required="" data-validation-required-message="Please enter your email address." style="margin: 5px;">
+                                <p class="help-block text-danger"></p>
+                            
+                        <textarea class="form-control" id="cmessage" name="Message:" rows="7" placeholder="Message" required="" data-validation-required-message="Please enter your message." style="margin: 5px;"></textarea>
+                                <p class="help-block text-danger"></p>
+                              
+                        <input type="submit" class="btn btn-round btn-g" value="Send" style="margin: 5px;">
                     </form>
                 </div>
                 <hr>
