@@ -65,7 +65,7 @@ nav#utilityMenu li .acctNav{
 }
 /*side bar*/
 section#sidebar{
-	width: 238px;
+	width: 300px;
 	float: right;
 	position: relative;
 	display: block;
