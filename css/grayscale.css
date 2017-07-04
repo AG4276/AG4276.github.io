@@ -231,7 +231,7 @@ a:focus {
   -o-background-size: cover;
 }
 ul.Projects{
-  list-style: none;
+  list-style: inherit;
 }
 .moon {
   width: 100%;
