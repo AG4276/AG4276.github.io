@@ -225,6 +225,7 @@ a:focus {
 .projects-section {
   width: 100%;
   padding: 50px 0;
+  display: table;
   margin: center;
   background: url(../img/Misty-lake.jpg) no-repeat center center scroll;
   background-color: black;
@@ -234,7 +235,9 @@ a:focus {
   -o-background-size: cover;
 }
 ul.Projects{
-  list-style: initial;
+ min-width: 696px;
+ padding: 20px;
+ display: inline;
 }
 .moon {
   width: 100%;
