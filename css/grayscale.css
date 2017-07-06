@@ -8,7 +8,7 @@ body {
   height: 100%;
   font-family: "Marck Script", cursive;
   color: #bf80ff;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px -1px 2px black;
   background-color: black;
 }
 html {
@@ -26,7 +26,7 @@ h6 {
   font-family: "Satisfy", cursive;
   font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 2px 6px black;
 }
 p {
   margin: 0 0 25px;l
@@ -236,6 +236,9 @@ a:focus {
 ul.Projects{
  display: inline;
 }
+.form{
+  color: black;
+}
 .moon {
   width: 100%;
   padding: 10%;
@@ -256,6 +259,11 @@ ul.Projects{
   border-radius: 0;
 }
 .btn-default {
+  border: 1px solid #42DCA3;
+  color: #42DCA3;
+  background-color: transparent;
+}
+.btn-btn-round-btn-g{
   border: 1px solid #42DCA3;
   color: #42DCA3;
   background-color: transparent;
