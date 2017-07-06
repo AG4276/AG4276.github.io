@@ -233,7 +233,7 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-ul.Projects{
+ul.Projects li{
  display: inline;
 }
 .form{
