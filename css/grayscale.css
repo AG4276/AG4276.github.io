@@ -257,6 +257,9 @@ ul.Projects{
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 0;
+  border: 1px solid #42DCA3;
+  color: #42DCA3;
+  background-color: transparent;
 }
 .btn-default {
   border: 1px solid #42DCA3;
