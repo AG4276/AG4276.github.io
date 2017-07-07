@@ -235,9 +235,9 @@ a:focus {
   -o-background-size: cover;
 }
 ul.Projects li{
- display: inline-block;
- margin: 0;
- float: left;
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
 }
 .form{
   color: black;
