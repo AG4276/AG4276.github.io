@@ -236,6 +236,7 @@ a:focus {
 }
 ul.Projects li{
   display: inline;
+  float: left;
   list-style-type: none;
   padding-right: 20px;
 }
@@ -274,7 +275,8 @@ ul.Projects li{
   color: #42DCA3;
   background-color: transparent;
 }
-.btn btn-round btn-g:hover{
+.btn btn-round btn-g:hover,
+.btn btn-round-btn-g:focus {
   border: 1px solid #42DCA3;
   outline: none;
   color: #6d00ae;
