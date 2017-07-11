@@ -274,11 +274,14 @@ ul.Projects li{
   color: #42DCA3;
   background-color: transparent;
 }
-.btn btn-round{
-  margin: 0 0 5px 0;
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
+input[type=submit]{
   background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
 }
 .btn btn-round:hover,
 .btn btn-round:focus {
