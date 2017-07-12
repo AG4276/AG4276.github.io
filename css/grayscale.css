@@ -270,8 +270,7 @@ ul.Projects li{
   background-color: transparent;
 }
 input[type=submit]{
-  border-radius: 10px;
-  border-color: #42DCA3
+  border-radius: 10px #42DCA3;
   color: white;
   padding: 16px 32px;
   text-decoration: none;
