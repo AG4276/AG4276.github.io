@@ -9,6 +9,7 @@ body {
   font-family: "Cormorant Upright", serif;
   color: #bf80ff;
   background-color: black;
+  text-shadow: 1px 2px 10px #8312e5;
 }
 html {
   width: 100%;
