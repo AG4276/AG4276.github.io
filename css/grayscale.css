@@ -178,6 +178,7 @@ a:focus {
   outline: none;
   background: rgba(255, 255, 255, 0.1);
   color: #6d00ae;
+  text-shadow: 1px 2px 10px #8312e5;
 }
 .btn-circle i.animated {
   -webkit-transition-property: -webkit-transform;
@@ -287,6 +288,7 @@ ul.Projects li{
   outline: none;
   color: #6d00ae;
   background-color: #42DCA3;
+  text-shadow: 1px 2px 10px #8312e5;
 }
 .btn-default:hover,
 .btn-default:focus {
@@ -294,6 +296,7 @@ ul.Projects li{
   outline: none;
   color: #6d00ae;
   background-color: #42DCA3;
+  text-shadow: 1px 2px 10px #8312e5;
 }
 input[type=submit] {
   background-color: rgba(0, 0, 0, 1);
@@ -309,6 +312,7 @@ input[type=submit]:hover {
   color: #6d00ae;
   border-color:#42DCA3;
   background-color: #42DCA3
+  text-shadow: 1px 2px 10px #8312e5;
 }
 
 ul.banner-social-buttons {
