@@ -264,7 +264,7 @@ ul.Projects li{
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border-radius: 0;
+  border-radius: 10;
   border: 1px solid #42DCA3;
   color: #42DCA3;
   background-color: transparent;
@@ -294,6 +294,22 @@ ul.Projects li{
   color: #6d00ae;
   background-color: #42DCA3;
 }
+input[type=submit] {
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    border-color: #42DCA3;
+    color: #42DCA3;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+   
+}
+input[type=submit]:hover {
+  color: #6d00ae;
+    border-color:#42DCA3;
+    background-color: #42DCA3
+}
+
 ul.banner-social-buttons {
   margin-top: 0;
 }
