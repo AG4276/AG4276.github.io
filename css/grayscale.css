@@ -242,7 +242,6 @@ ul.Projects li{
 }
 .form{
   margin: 5px 0 0 0;
- 
 }
 .moon {
   width: 100%;
@@ -264,11 +263,6 @@ ul.Projects li{
   color: #42DCA3;
   background-color: transparent;
 }
-.btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
-  background-color: transparent;
-}
 input[type=submit]{
   background-color: #42DCA3;
   border-radius: 10px;
@@ -277,15 +271,11 @@ input[type=submit]{
   text-decoration: none;
   margin: 4px 2px;
 }
-
-.btn btn-round:hover,
-.btn btn-round:focus {
+.btn-default {
   border: 1px solid #42DCA3;
-  outline: none;
-  color: #6d00ae;
-  background-color: #42DCA3;
+  color: #42DCA3;
+  background-color: transparent;
 }
-
 .btn-default:hover,
 .btn-default:focus {
   border: 1px solid #42DCA3;
