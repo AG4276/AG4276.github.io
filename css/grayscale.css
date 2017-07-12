@@ -275,6 +275,7 @@ ul.Projects li{
   border: 1px solid #42DCA3;
   color: #42DCA3;
   background-color: transparent;
+  text-shadow: 1px -1px 9px #0edb89;
 }
 .btn btn-round{
   margin: 0 0 5px 0;
