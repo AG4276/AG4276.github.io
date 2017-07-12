@@ -270,13 +270,11 @@ ul.Projects li{
   background-color: transparent;
 }
 input[type=submit]{
-  background-color: transparent;
   border-radius: 10px;
   border-color: #42DCA3
   color: white;
   padding: 16px 32px;
   text-decoration: none;
-  margin: 5px;
   cursor: pointer;
 }
 .btn btn-round:hover,
