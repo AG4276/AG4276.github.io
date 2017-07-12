@@ -241,7 +241,7 @@ ul.Projects li{
   padding-right: 20px;
 }
 .form{
-  margin: 0 0 5px 0;
+  margin: 5px 0 0 0;
  
 }
 .moon {
@@ -272,6 +272,7 @@ ul.Projects li{
 input[type=submit]{
   background-color: transparent;
   border-radius: 10px;
+  border-color: #42DCA3
   color: white;
   padding: 16px 32px;
   text-decoration: none;
