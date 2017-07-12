@@ -277,6 +277,7 @@ input[type=submit]{
   text-decoration: none;
   margin: 4px 2px;
 }
+
 .btn btn-round:hover,
 .btn btn-round:focus {
   border: 1px solid #42DCA3;
@@ -284,6 +285,7 @@ input[type=submit]{
   color: #6d00ae;
   background-color: #42DCA3;
 }
+
 .btn-default:hover,
 .btn-default:focus {
   border: 1px solid #42DCA3;
