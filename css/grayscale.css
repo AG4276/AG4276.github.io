@@ -79,11 +79,6 @@ a:hover, a:focus {
     text-shadow: 3px 1px 3px #a7ffcd;
 }
 
-.navbar-custom .navbar-toggle {
-    color: white;
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 12px;
-}
 
 .navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
     outline: none;
@@ -123,7 +118,7 @@ a:hover, a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(160, 0, 255, 0.18);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -340,7 +335,7 @@ ul.Projects li {
 }
 
 .btn-default:hover, .btn-default:focus {
-    border: 1px solid #42DCA3;
+    border: 1px solid #42dca3;
     outline: none;
     color: #6d00ae;
     background-color: #42DCA3;
@@ -371,7 +366,7 @@ input[type=submit]:hover {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    color: #9933ff;
+    color: #6d00ae;
     font-size: larger;
     border-color: #42DCA3;
     background-color: #42DCA3;
