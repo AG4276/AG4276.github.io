@@ -216,5 +216,11 @@ button:hover {
 }
 .carousel-container{
 	height: 50%;
-	width: 100%
+	width: 100%;
+	
+}
+.carousel-inner {float: left;
+    position: left;
+    width: 50%;
+    overflow: hidden;
 }
