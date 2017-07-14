@@ -214,3 +214,7 @@ button:hover {
 	background-color: rgba(15, 177, 232, 0.5);
 	border: 1px solid #20bcff;
 }
+.carousel-container{
+	height: 50%;
+	width: 100%
+}
