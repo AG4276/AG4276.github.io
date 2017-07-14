@@ -6,19 +6,19 @@ body{
 	background: #80bfff url(poke-img/background1.jpg) repeat fixed top center;
 	padding: 0;
 	margin: 0;
-	-webkit-background-size: 100% 100%;
-	-moz-background-size: 100% 100%;
-	background-size: 100% 100%;
-	-o-background-size: 100% 100%;
+	-webkit-background-size: 50% 50%;
+	-moz-background-size: 50% 50%;
+	background-size: 52% 100%;
+	-o-background-size: 50% 50%;
 }
 h1{
-	color: #2BA967;
+	color: #9e28e8;
 	font-size: 2.0em;
-	margin: 0.5em 0 0.5em 0;
+	margin: 0 0 .5em 0;
 	padding: 0;
 }
 h2{
-	color: #745b2f;
+	color: #2fb5e8;
 	font-size: 1.7em;
 	padding: 0px;
 	margin: 0.5em 0 0.35em 0;
@@ -26,7 +26,7 @@ h2{
 p{
 	font-size: 1.2em;
 	line-height: 1.4em;
-	color: #555;
+	color: #9312e4;
 	padding: 0PX;
 	margin: 0px 0.5em 0.75em 0px;
 }
@@ -43,22 +43,22 @@ p{
 }
 /*Header*/
 header{
-	padding: 2.5em 0 0.5em;
-	margin: 0 0 2.0em;
-	background: #4d4dff url(poke-img/munchlax.jpg) center 0px;
+	padding: 1.5em 0 0.5em;
+	margin: 1px 0px 2.0em;
+	background: #4d4dff url(poke-img/munchlax.jpg)  right -80px no-repeat;
 }
 header h1{
 	font-family: "Times New Roman", Times, serif;
-	color: #745b2f;
+	color: #9443c7;
 	font-size: 7.5em;
 	letter-spacing: -0.025em;
 	margin: 0;
-	text-shadow: 0px -3px 0 #bd8437;
+	text-shadow: 0px -3px 0 #7d37bd;
 }
 header h2{
 	font-weight: 300;
 	font-size: 3.8em;
-	color: #2BA967;
+	color: #5f20de;
 	margin: -0.4em 0 0 1.0em;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -87,22 +87,23 @@ nav li a, nav li a:visited{
 	padding: 0.3em 0.6em;
 }
 nav li a:hover{
-	color: #C64322;
-	background-color: rgba(252,251,243,0.75);
+	color: #27b9da;
+	background-color: rgba(249, 243, 252, 0.2);
 }
 nav#utilityMenu{
 	float: right;
-	margin: -1.5em 0 0 0;
-	padding: 0.35em;
-	background-color: #38283e;
+	display: blockin;
+	margin: -1.2em 0 0em 0;
+	padding: .5em;
+	background-color: #613c6f;
 	height: 1.3em;
 }
 nav#utilityMenu li{
-	padding: 0 0.25em 0 0.2em;
+	padding: 0 0.25em 0 0.25em;
 	vertical-align: middle;
 }
 nav#utility ul li.acctNav a, nav#utilityMenu ul li.acctNav a:visited{
-	color: #fff;
+	color: #1ec4d4;
 	text-decoration: none;
 	display: inline-block;
 	height: 1.3em;
@@ -111,11 +112,11 @@ nav#utility ul li.acctNav a, nav#utilityMenu ul li.acctNav a:visited{
 	font-size: 0.8em;
 }
 nav#utilityMenu ul li.accNav a.active{
-	background-color: #C64322
+	background-color: #22a4c6
 }
 nav#utilityMenu ul li.accNav a:hover {
 	background-color: rgba(252, 251, 243, 0.7);
-	color: #C64322;
+	color: #228ac6;
 }
 nav#utilityMenu li a, nav#utilityMenu li a:visited { padding: 0; }
 nav#utilityMenu li a:hover { background-color: transparent; }
@@ -156,7 +157,7 @@ section div.panel{
 	margin: 0 0.5em 2.0em 0.5em;
 	padding: 1.0em;
 	background-color: #fff;
-	border: #ccc solid 1px;
+	border: #7130bd solid 4px;
 	border-radius: 0.6em;
 }
 section div. panel img.cheeseType{
@@ -175,12 +176,12 @@ footer{
 	color: #fff;
 	width: 100%;
 	text-align: center;
-	padding: 1.5em 2.0em;
+	padding: 2.5em 0em;
 }
 footer ul#menuFooter {
 	display: inline-block;
 	list-style: none;
-	margin: 0 0 0 0.6em;
+	margin: 0 0 1em 0.6em;
 	padding: 0;
 }
 footer ul li {
@@ -197,7 +198,7 @@ footer a, footer a:visited {
 	text-decoration: none;
 }
 footer a:hover {
-	color: #fff;
+	color: #55dee4;
 	text-decoration: underline;
 }
 button {
@@ -206,10 +207,10 @@ button {
 	display: inline-block;
 	margin: 0 0.75em 0 0;
 	padding: 0.2em 0.5em;
-	border: 1px solid #e8df0f;
+	border: 1px solid rgb(30, 188, 230);
 	text-transform: uppercase;
 }
 button:hover {
-	background-color: #e8df0f;
-	border: 1px solid #745b2f;
+	background-color: rgba(15, 177, 232, 0.5);
+	border: 1px solid #20bcff;
 }
