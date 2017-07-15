@@ -134,7 +134,7 @@ section#sidebar {
 	width: 238px;
 	float: right;
 	position: relative;
-	display: block;
+	display: inline-block;
 	background-color: #fff;
 	margin: 1.5em 0 3.0em 1.5em;
 	padding: 1.7em 0.5em 2.0em 1.7em;
@@ -160,8 +160,13 @@ section div.panel{
 	border: #7130bd solid 4px;
 	border-radius: 0.6em;
 }
-section div. panel img.cheeseType{
+section div.panel img.cheeseType{
 	width: 100%;
+}
+.sweet-container{
+	display: inline-table;
+	position: absolute;
+	vertical-align: middle;
 }
 /*clear*/
 div.clear {
