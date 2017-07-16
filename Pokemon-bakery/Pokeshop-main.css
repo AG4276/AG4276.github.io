@@ -168,6 +168,9 @@ section div.panel img.cheeseType{
 	position: absolute;
 	vertical-align: middle;
 }
+.container{
+	position: inherit;
+}
 /*clear*/
 div.clear {
 	clear: both;
@@ -218,14 +221,4 @@ button {
 button:hover {
 	background-color: rgba(15, 177, 232, 0.5);
 	border: 1px solid #20bcff;
-}
-.carousel-container{
-	height: 50%;
-	width: 50%;
-	
-}
-.carousel-inner {float: left;
-    position: left;
-    width: 50%;
-    overflow: hidden;
 }

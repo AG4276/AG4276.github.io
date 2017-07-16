@@ -278,6 +278,11 @@ a:hover, a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
+.img-circle{
+    border-radius:50%;
+    position: relative;
+    width: 20%;
+}
 
 ul.Projects li {
     display: inline;
