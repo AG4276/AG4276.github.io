@@ -168,8 +168,21 @@ section div.panel img.cheeseType{
 	position: absolute;
 	vertical-align: middle;
 }
-.container{
-	position: inherit;
+.container {
+    width: 800px;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.carousel-caption{
+	width: 50%;
+	height: 50%;
+}
+.carousel-inner {
+    width: 50%;
+    overflow: hidden;
+    align-content: center;
 }
 /*clear*/
 div.clear {
