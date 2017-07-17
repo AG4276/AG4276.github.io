@@ -163,18 +163,24 @@ section div.panel{
 section div.panel img.cheeseType{
 	width: 100%;
 }
-.sweet-container{
-	display: inline-table;
-	position: absolute;
-	vertical-align: middle;
+.main-container{
+	display: inline-block;
 }
+.sweet-container {
+    display: inline-table;
+    position: relative;
+    vertical-align: middle;
+    float: left;
+}
+
 .container {
-    width: 800px;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    float: left;
 }
+
 .carousel-caption{
 	width: 50%;
 	height: 50%;
