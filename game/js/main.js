@@ -5,7 +5,12 @@ function Hero(game, x, y) {
 
     this.game.physics.enable(this);
     this.body.collideWorldBounds = true;
-};
+
+	this.animations.add("stop", [0]);
+	this.animations.add("run", [1, 2], 8, true);
+	this.animations.add("jump", [3]);
+	this.animations.add("fall", [4]);
+}
 
 Hero.prototype = Object.create(Phaser.Sprite.prototype);
 Hero.prototype.constructor = Hero;
@@ -13,10 +18,18 @@ Hero.prototype.constructor = Hero;
 Hero.prototype.move = function (direction) {
     const SPEED = 200;
     this.body.velocity.x = direction * SPEED;
+
+    if (this.body.velocity.x < 0) {
+    	this.scale.x = -1;
+    }
+    else if (this.body.velocity.x > 0) {
+    	th.scale.x = 1;
+    }
 };
 Hero.prototype.jump = function () {
 	const JUMP_SPEED = 600;
 	let canJump = this.body.touching.down;
+
 	if (canJump) {
 		this.body.velocity.y = -JUMP_SPEED;
 	}
@@ -26,21 +39,46 @@ Hero.prototype.bounce = function () {
 	const BOUNCE_SPEED = 200;
 	this.body.velocity.y = -BOUNCE_SPEED;
 };
+Hero.prototype,update = function() {
+	let animationName = this._getAnimationName();
+    if (this.animations.name !== animationName) {
+        this.animations.play(animationName);
+    }
+};
+Hero.prototype,_getAnimationName = function(){
+	let name = "stop";
+
+	if (this.body.velocity.y < 0) {
+		name = "jump";
+	}
+	else if (this.velocity.y >= 0 && !this.body.touching.down) {
+		name = "fall";
+	}
+	else if (this.body.velocity.x !== 0 && this.body.touching.down) {
+		name = "run";
+	}
+	return name;
+};
 //spider//
 function Spider(game, x, y) {
 	Phaser.Sprite.call(this, game, x, y, "spider");
+
 	this.anchor.set(0.5);
+
 	this.animations.add("crawl", [0, 1, 2], 8, true);
 	this.animations.add("die", [0, 4, 0, 4, 0, 4, 3, 3, 3, 3, 3, 3], 12)
 	this.animations.play("crawl");
+
 	this.game.physics.enable(this);
 	this.body.collideWorldBounds = true;
 	this.body.velocity.x = Spider.SPEED;
 }
 
 Spider.SPEED = 100;
+
 Spider.prototype =Object.create(Phaser.Sprite.prototype);
 Spider.prototype.constructor = Spider;
+
 Spider.prototype.update = function() {
 	if (this.body.touching.right || this.body.blocked.right) {
 		this.body.velocity.x = -Spider.SPEED;
@@ -49,8 +87,10 @@ Spider.prototype.update = function() {
 		this.body.velocity.x = Spider.SPEED;
 	}
 };
+
 Spider.prototype.die = function () {
 	this.body.enable = false;
+
 	this.animations.play("die").onComplete.addOnce(function () {
 	this.kill();
 	}, this);
@@ -60,38 +100,44 @@ PlayState = {};
 
 PlayState.init = function () {
     this.game.renderer.renderSession.roundPixels = true;
+
     this.keys = this.game.input.keyboard.addKeys({
         left: Phaser.KeyCode.LEFT,
         right: Phaser.KeyCode.RIGHT,
         up: Phaser.KeyCode.UP
     });
+
     this.keys.up.onDown.add(function (){
     	let didjump = this.hero.jump();
     	if (didjump) {
     		this.sfx.jump.play();
     	}
     }, this);
+
     this.coinPickupCount = 0;
 };
 
 PlayState.preload = function(){
 	this.game.load.json("level:1", "data/level01.json");
+	this.game.load.image("font:numbers", "images/numbers.png");
 
-	this.game.load.image("background", "images/background.png");
-	this.game.load.image("ground", "images/ground.png");
-	this.game.load.image("grass:8x1", "images/grass_8x1.png");
-	this.game.load.image("grass:6x1", "images/grass_6x1.png");
-	this.game.load.image("grass:4x1", "images/grass_4x1.png");
-	this.game.load.image("grass:2x1", "images/grass_2x1.png");
-	this.game.load.image("grass:1x1", "images/grass_1x1.png");
-	this.game.load.image("hero", "images/hero_stopped.png");
-	this.game.load.audio("sfx:jump", "audio/jump.wav");
-	this.game.load.spritesheet("coin", "images/coin_animated.png", 22, 22);
-	this.game.load.audio("sfxcoin", "audio/coin.wav");
-	this.game.load.spritesheet("spider", "images/spider.png", 42, 32);
+	this.game.load.image("background", "images/background1.png");
+	this.game.load.image("ground", "images/ground1.png");
+	this.game.load.image("grass:8x1", "images/sand_8x1.png");
+	this.game.load.image("grass:6x1", "images/sand_6x1.png");
+	this.game.load.image("grass:4x1", "images/sand_4x1.png");
+	this.game.load.image("grass:2x1", "images/sand_2x1.png");
+	this.game.load.image("grass:1x1", "images/sand_1x1.png");
 	this.game.load.image("invisible-wall", "images/invisible_wall.png");
-	this.game.load.audio("sfx:stomp", "audio/stomp.wav");
 	this.game.load.image("icon:coin", "images/coin_icon.png");
+
+	this.game.load.spritesheet("coin", "images/coin_animated.png", 22, 22);
+	this.game.load.spritesheet("spider", "images/spider.png", 42, 32);
+	this.game.load.spritesheet("hero", "images/hero1.png", 36, 42)
+
+	this.game.load.audio("sfx:jump", "audio/jump.wav");
+	this.game.load.audio("sfxcoin", "audio/coin.wav");
+	this.game.load.audio("sfx:stomp", "audio/stomp.wav");
 };
 
 PlayState.create = function () {
@@ -101,30 +147,38 @@ PlayState.create = function () {
     	stomp: this.game.add.audio("sfx:stomp")
     };
 
-    this.game.add.image(0, 0, "background");
+    this.game.add.image(0, -40, "background");
     this._loadLevel(this.game.cache.getJSON("level:1"));
+
+    this._createHud();
 };
 
 PlayState.update = function () {
     this._handleCollisions();
     this._handleInput();
+	this.coinFont.text = `x${this.coinPickupCount}`;
 };
 
 PlayState._handleCollisions = function() { 
 	this.game.physics.arcade.collide(this.spiders, this.platforms);
 	this.game.physics.arcade.collide(this.spiders, this.enemyWalls);
 	this.game.physics.arcade.collide(this.hero, this.platforms);
-	this.game.physics.arcade.overlap(this.hero, this.coins, this._onHeroVsCoin, null, this);
-	this.game.physics.arcade.overlap(this.hero, this.spiders, this._onHeroVsEnemy, null, this);
+
+	this.game.physics.arcade.overlap(this.hero, this.coins, this._onHeroVsCoin, 
+		null, this);
+	this.game.physics.arcade.overlap(this.hero, this.spiders, 
+		this._onHeroVsEnemy, null, this);
 };
 
 
 PlayState._handleInput = function() {
 	if (this.keys.left.isDown) {
 		this.hero.move(-1);
-	} else if (this.keys.right.isDown) {
+	}
+	else if (this.keys.right.isDown) {
 		this.hero.move(1);
-	} else {
+	} 
+	else {
 		this.hero.move(0);
 	}
 };
@@ -135,9 +189,11 @@ PlayState._loadLevel = function(data) {
 	this.spiders = this.game.add.group();
 	this.enemyWalls = this.game.add.group();
 	this.enemyWalls.visible = false;
+
 	data.platforms.forEach(this._spawnPlatform, this);
 	this._spawnCharacters({hero: data.hero, spiders: data.spiders});
 	data.coins.forEach(this._spawnCoin, this);
+
 	const GRAVITY = 1200;
 	this.game.physics.arcade.gravity.y = GRAVITY;
 };
@@ -149,6 +205,7 @@ PlayState._spawnPlatform = function (platform) {
 	this.game.physics.enable(sprite);
 	sprite.body.allowGravity = false;
 	sprite.body.immovable = true;
+
 	this._spawnEnemyWall(platform.x, platform.y, "left");
 	this._spawnEnemyWall(platform.x + sprite.width, platform.y, "right");
 };
@@ -173,8 +230,10 @@ PlayState._spawnCharacters = function(data) {
 PlayState._spawnCoin = function (coin) {
 	let sprite = this.coins.create(coin.x, coin.y, "coin");
 	sprite.anchor.set(0.5,0.5);
+
 	this.game.physics.enable(sprite);
 	sprite.body.allowGravity = false;
+
 	sprite.animations.add("rotate", [0, 1, 2, 1], 6, true);
 	sprite.animations.play("rotate");
 };
@@ -195,6 +254,21 @@ PlayState._onHeroVsEnemy = function (hero, enemy) {
 		this.game.state.restart();
 	}
 };
+PlayState._createHud = function() {
+	const NUMBERS_STR = "0123456789x ";
+	this.coinFont = this.game.add.retroFont("font:numbers", 20, 26, 
+		NUMBERS_STR, 6);
+	
+	let coinIcon = this.game.make.image(0, 0, "icon:coin");
+	let coinScoreImg = this.game.make.image(coinIcon.x + coinIcon.width, 
+		coinIcon.height / 2, this.coinFont);
+	coinScoreImg.anchor.set(0, 0.5);
+
+	this.hud = this.game.add.group();
+	this.hud.add(coinIcon);
+	this.hud.add(coinScoreImg);
+	this.hud.position.set(10, 10);
+}
 window.onload = function() {
 	let game = new Phaser.Game(960, 600, Phaser.AUTO, "game");
 	game.state.add("play", PlayState);
