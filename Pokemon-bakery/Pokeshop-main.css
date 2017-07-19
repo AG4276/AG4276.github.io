@@ -20,6 +20,10 @@ h2{
 	padding: 0px;
 	margin: 0.5em 0 0.35em 0;
 }
+h6{
+	color: red;
+	font-style: bold;
+}
 p{
 	font-size: 1.2em;
 	line-height: 1.4em;
@@ -158,7 +162,7 @@ section div.panel{
 	border: #7130bd solid 4px;
 	border-radius: 0.6em;
 }
-section div.panel img.cheeseType{
+section div.panel img.sweets{
 	width: 100%;
 }
 .main-container{
@@ -186,12 +190,13 @@ section div.panel img.cheeseType{
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: #9312e4;
+  background-color: #4da6ff;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
-  width: 100%;
+  width: 97.5%;
   text-align: center;
 }
 
